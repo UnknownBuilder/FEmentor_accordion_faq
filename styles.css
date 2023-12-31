@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+:root {
+
+    --clr-white:hsl(0, 0%, 100%);
+    --clr-lightPink:hsl(275, 100%, 97%);
+    --clr-grayisPurple:hsl(292, 16%, 49%);
+    --clr-darkPurple:hsl(292, 42%, 14%);
+
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* <---------- HTML ELEMENTS ---------> */
+
+
+
+/* <---------- HTML CLASSES ---------> */
+
+
+/* <---------- HTML IDS ----------> */
