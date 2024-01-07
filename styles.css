@@ -41,6 +41,7 @@ h2 {
 h2:hover {
 
     color:var(--clr-bringPink);
+    cursor: pointer;
 }
 
 main {
@@ -111,6 +112,11 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+.question-heading-wrapper img {
+
+    cursor: pointer;
 }
 
 .question-wrapper {
