@@ -38,12 +38,6 @@ h2 {
     font-size: 1.2rem;
 }
 
-h2:hover {
-
-    color:var(--clr-bringPink);
-    cursor: pointer;
-}
-
 main {
 
     display: flex;
@@ -114,6 +108,12 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    cursor: pointer;
+}
+
+.question-heading-wrapper:hover {
+
+    color:var(--clr-bringPink);
     cursor: pointer;
 }
 
