@@ -39,9 +39,9 @@ Users should be able to:
 
 Only used the basics. Nothing fancy here. 
 
--HTML
--CSS
--Javascript
+- HTML
+- CSS
+- Javascript
 
 ### What I learned
 
