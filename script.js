@@ -16,7 +16,7 @@ document.querySelectorAll("h2").forEach(item => {
 
         if(selectedParagraph == "hidden") {
 
-            showParagraph(elementID)
+            showParagraph(elementID);
         } else {
 
             hideParagrap(elementID);
@@ -30,55 +30,54 @@ document.querySelectorAll("img.icon").forEach(item => {
 
     item.addEventListener("click", event => {
 
-        let elementID = parseInt(event.target.id).toString();
-        console.log(elementID);
+        const elementID = parseInt(event.target.id).toString();
+        const selectedParagraph = stateManagement[elementID];
 
-        if(event.target.className.includes("plus")) {
-
-            let imgSource = document.getElementById(elementID + ".1");
-            console.log(imgSource);
-            imgSource.style.visibility = "hidden";
-            imgSource.style.position = "absolute";
-
-            let imgSource2 = document.getElementById(elementID + ".2");
-            console.log(imgSource2);
-            imgSource2.style.visibility = "visible";
-            imgSource2.style.position = "relative";
+        if(selectedParagraph == "hidden") {
 
             showParagraph(elementID);
-
         } else {
-
-            let imgSource = document.getElementById(elementID + ".2");
-            console.log(imgSource);
-            imgSource.style.visibility = "hidden";
-            imgSource.style.position = "absolute";
-
-            let imgSource2 = document.getElementById(elementID + ".1");
-            console.log(imgSource2);
-            imgSource2.style.visibility = "visible";
-            imgSource2.style.position = "relative";
 
             hideParagrap(elementID);
         };
+
+        updateState(selectedParagraph, elementID);
+ 
     });
 });
 
 
+function showParagraph(elementID) {
 
-function showParagraph(a) {
-
-    const faqSection = document.getElementsByClassName(a);
-    console.log(faqSection);
+    const faqSection = document.getElementsByClassName(elementID);
     faqSection[0].style.visibility = "visible";
     faqSection[0].style.position = "relative";
+
+    let imgSource = document.getElementById(elementID + ".1");
+    imgSource.style.visibility = "hidden";
+    imgSource.style.position = "absolute";
+
+    let imgSource2 = document.getElementById(elementID + ".2");
+    imgSource2.style.visibility = "visible";
+    imgSource2.style.position = "relative";
+
+
+
 };
 
-function hideParagrap(a) {
+function hideParagrap(elementID) {
 
-    const faqSection = document.getElementsByClassName(a);
+    const faqSection = document.getElementsByClassName(elementID);
     faqSection[0].style.visibility = "hidden";
     faqSection[0].style.position = "absolute";
+
+    let imgSource = document.getElementById(elementID + ".2");
+    imgSource.style.visibility = "hidden";
+    imgSource.style.position = "absolute";
+
+    let imgSource2 = document.getElementById(elementID + ".1");
+    imgSource2.style.visibility = "visible";
+    imgSource2.style.position = "relative";
 };
 
 function updateState(a, b){

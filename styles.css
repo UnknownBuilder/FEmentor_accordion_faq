@@ -129,3 +129,19 @@ footer {
     border-top: solid;
     border-color: var(--clr-lightPink);
 }
+
+@media (max-width:775px) {
+    
+    main {
+
+        width: 35rem;
+    }
+}
+
+@media (max-width:600px) {
+    
+    main {
+
+        width: 25rem;
+    }
+}
