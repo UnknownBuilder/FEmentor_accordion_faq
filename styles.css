@@ -69,21 +69,23 @@ footer {
     
 }
 
-.expand-icons {
-
-    padding-left: .5rem;
-}
-
-.expand-icons:hover {
-
-    fill:red;
-}
-
 .heading-wrapper {
 
     display: flex;
     padding-bottom: 1.75rem;
     gap:1.5rem
+}
+
+.icon {
+
+    padding-left: .5rem;
+}
+
+.icon-minus {
+
+    visibility: hidden;
+    position:absolute;
+
 }
 
 .main-wrapper {
@@ -111,6 +113,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    cursor: pointer;
 }
 
 .question-wrapper {

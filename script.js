@@ -26,11 +26,50 @@ document.querySelectorAll("h2").forEach(item => {
     });
 });
 
+document.querySelectorAll("img.icon").forEach(item => {
+
+    item.addEventListener("click", event => {
+
+        let elementID = parseInt(event.target.id).toString();
+        console.log(elementID);
+
+        if(event.target.className.includes("plus")) {
+
+            let imgSource = document.getElementById(elementID + ".1");
+            console.log(imgSource);
+            imgSource.style.visibility = "hidden";
+            imgSource.style.position = "absolute";
+
+            let imgSource2 = document.getElementById(elementID + ".2");
+            console.log(imgSource2);
+            imgSource2.style.visibility = "visible";
+            imgSource2.style.position = "relative";
+
+            showParagraph(elementID);
+
+        } else {
+
+            let imgSource = document.getElementById(elementID + ".2");
+            console.log(imgSource);
+            imgSource.style.visibility = "hidden";
+            imgSource.style.position = "absolute";
+
+            let imgSource2 = document.getElementById(elementID + ".1");
+            console.log(imgSource2);
+            imgSource2.style.visibility = "visible";
+            imgSource2.style.position = "relative";
+
+            hideParagrap(elementID);
+        };
+    });
+});
+
 
 
 function showParagraph(a) {
 
     const faqSection = document.getElementsByClassName(a);
+    console.log(faqSection);
     faqSection[0].style.visibility = "visible";
     faqSection[0].style.position = "relative";
 };
